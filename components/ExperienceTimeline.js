@@ -43,47 +43,97 @@ export default function ExperienceTimeline() {
   return (
     <section className="section section-azure" style={{ padding: "50px 0" }}>
       <div className="container">
-        <div style={{ marginBottom: "24px" }}>
+        <div style={{ marginBottom: "24px", textAlign: "left" }}>
           <div className="eyebrow-royal">
             <span>Career Milestones</span>
           </div>
           <h2 className="section-title">Leadership Track Record</h2>
         </div>
 
-        <div style={{ maxWidth: "760px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "10px" }}>
+        <div
+          style={{
+            maxWidth: "760px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "12px",
+          }}
+        >
           {experiences.map((exp, i) => (
             <div
               key={i}
-              className="royal-card"
               style={{
+                background: "#FFFFFF",
+                border: "1px solid #E2E8F0",
+                borderRadius: "12px",
+                padding: "16px 20px",
+                boxShadow: "0 1px 3px rgba(30, 64, 175, 0.04)",
                 display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                flexWrap: "wrap",
-                gap: "8px",
-                padding: "14px 20px",
+                flexDirection: "column",
+                gap: "4px",
+                textAlign: "left",
               }}
             >
-              <div>
-                <h3 style={{ fontSize: "0.98rem", fontWeight: 700, color: "#0F172A" }}>{exp.role}</h3>
-                <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#1E40AF" }}>{exp.company}</span>
-                <p style={{ fontSize: "0.8rem", color: "#64748B", marginTop: "2px" }}>{exp.highlight}</p>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "12px",
+                }}
+              >
+                <h3
+                  style={{
+                    fontSize: "1.02rem",
+                    fontWeight: 700,
+                    color: "#0F172A",
+                    margin: 0,
+                    textAlign: "left",
+                  }}
+                >
+                  {exp.role}
+                </h3>
+
+                <span
+                  style={{
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    color: "#1E40AF",
+                    background: "#EFF6FF",
+                    border: "1px solid #BFDBFE",
+                    padding: "3px 10px",
+                    borderRadius: "9999px",
+                    whiteSpace: "nowrap",
+                    flexShrink: 0,
+                  }}
+                >
+                  {exp.period}
+                </span>
               </div>
 
               <span
                 style={{
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
+                  fontSize: "0.88rem",
+                  fontWeight: 600,
                   color: "#1E40AF",
-                  background: "#EFF6FF",
-                  padding: "3px 8px",
-                  borderRadius: "9999px",
-                  border: "1px solid #BFDBFE",
-                  alignSelf: "flex-start",
+                  textAlign: "left",
+                  display: "block",
                 }}
               >
-                {exp.period}
+                {exp.company}
               </span>
+
+              <p
+                style={{
+                  fontSize: "0.82rem",
+                  color: "#64748B",
+                  margin: 0,
+                  textAlign: "left",
+                  lineHeight: 1.45,
+                }}
+              >
+                {exp.highlight}
+              </p>
             </div>
           ))}
         </div>

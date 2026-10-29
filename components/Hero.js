@@ -7,16 +7,9 @@ export default function Hero({ onOpenImageModal }) {
   return (
     <section className="section" style={{ paddingTop: "40px", paddingBottom: "50px" }}>
       <div className="container">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "36px",
-            alignItems: "center",
-          }}
-        >
-          {/* Left Text */}
-          <div>
+        <div className="hero-grid-layout">
+          {/* 1. Text Block */}
+          <div className="hero-text-block">
             <div className="eyebrow-royal">
               <MapPin size={12} />
               <span>Johannesburg, South Africa</span>
@@ -51,7 +44,7 @@ export default function Hero({ onOpenImageModal }) {
                 fontSize: "0.95rem",
                 color: "#64748B",
                 lineHeight: 1.5,
-                marginBottom: "20px",
+                marginBottom: "18px",
                 maxWidth: "480px",
               }}
             >
@@ -59,7 +52,7 @@ export default function Hero({ onOpenImageModal }) {
             </p>
 
             {/* Badges */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "24px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
               <span
                 style={{
                   background: "#EFF6FF",
@@ -114,21 +107,10 @@ export default function Hero({ onOpenImageModal }) {
                 <span>Bilateral Government Envoy</span>
               </span>
             </div>
-
-            {/* CTAs */}
-            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-              <a href="#contact" className="btn btn-royal" style={{ padding: "10px 20px", minHeight: "40px" }}>
-                <span>Get in Touch</span>
-                <ArrowRight size={15} />
-              </a>
-              <a href="#football" className="btn btn-white-outline" style={{ padding: "10px 20px", minHeight: "40px" }}>
-                <span>View Academy</span>
-              </a>
-            </div>
           </div>
 
-          {/* Right Image - Original Uncropped */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          {/* 2. Image Block - Placed above buttons on mobile */}
+          <div className="hero-image-block">
             <div
               className="img-frame-white"
               style={{
@@ -158,6 +140,17 @@ export default function Hero({ onOpenImageModal }) {
             <p style={{ fontSize: "0.75rem", color: "#64748B", marginTop: "8px", textAlign: "center" }}>
               Barcelona, Spain · IX RCDE Academies Convention
             </p>
+          </div>
+
+          {/* 3. Action Buttons - Placed below image on mobile, and under text on desktop */}
+          <div className="hero-action-buttons">
+            <a href="#contact" className="btn btn-royal" style={{ padding: "10px 20px", minHeight: "40px" }}>
+              <span>Get in Touch</span>
+              <ArrowRight size={15} />
+            </a>
+            <a href="#football" className="btn btn-white-outline" style={{ padding: "10px 20px", minHeight: "40px" }}>
+              <span>View Academy</span>
+            </a>
           </div>
         </div>
       </div>
