@@ -5,69 +5,77 @@ import { ArrowRight, MapPin, ShieldCheck, Trophy, Sparkles } from "lucide-react"
 
 export default function Hero({ onOpenImageModal }) {
   return (
-    <section className="section" style={{ paddingTop: "48px", paddingBottom: "64px" }}>
+    <section className="section" style={{ paddingTop: "40px", paddingBottom: "50px" }}>
       <div className="container">
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "40px",
+            gap: "36px",
             alignItems: "center",
           }}
         >
-          {/* Left Column */}
+          {/* Left Text */}
           <div>
             <div className="eyebrow-royal">
-              <MapPin size={13} />
+              <MapPin size={12} />
               <span>Johannesburg, South Africa</span>
             </div>
 
             <h1
               className="font-heading"
               style={{
-                fontSize: "clamp(2.1rem, 4.5vw, 3.3rem)",
+                fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 800,
                 lineHeight: 1.15,
-                letterSpacing: "-0.03em",
                 color: "var(--color-royal-dark)",
-                marginBottom: "18px",
+                marginBottom: "12px",
               }}
             >
-              Building world-class pathways in <span style={{ color: "var(--color-royal)" }}>youth football</span> &amp; sports diplomacy.
+              Michael <span style={{ color: "var(--color-royal)" }}>Bender</span>
             </h1>
 
             <p
               style={{
-                fontSize: "1.08rem",
-                color: "#334155",
-                lineHeight: 1.65,
-                marginBottom: "24px",
-                maxWidth: "540px",
+                fontSize: "1.05rem",
+                fontWeight: 600,
+                color: "#1E293B",
+                marginBottom: "8px",
               }}
             >
-              Chief Executive Officer of <strong>RCD Espanyol de Barcelona Academy South Africa</strong> and{" "}
-              <strong>IberCup SA</strong>. Over 30 years bridging elite youth development with international sports governance
-              and corporate marketing leadership.
+              CEO · RCD Espanyol de Barcelona Academy SA &amp; IberCup SA
             </p>
 
-            {/* Badges in Royal Blue & White */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "30px" }}>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "#64748B",
+                lineHeight: 1.5,
+                marginBottom: "20px",
+                maxWidth: "480px",
+              }}
+            >
+              30+ years leading elite youth football infrastructure, international sports diplomacy, and corporate brand strategy.
+            </p>
+
+            {/* Badges */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "24px" }}>
               <span
                 style={{
                   background: "#EFF6FF",
                   color: "#1E40AF",
                   border: "1px solid #BFDBFE",
-                  fontSize: "0.82rem",
+                  fontSize: "0.78rem",
                   fontWeight: 600,
-                  padding: "6px 12px",
+                  padding: "5px 12px",
                   borderRadius: "9999px",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <ShieldCheck size={14} color="#1E40AF" />
-                <span>RCD Espanyol de Barcelona SA</span>
+                <ShieldCheck size={13} />
+                <span>LaLiga Academy CEO</span>
               </span>
 
               <span
@@ -75,17 +83,17 @@ export default function Hero({ onOpenImageModal }) {
                   background: "#EFF6FF",
                   color: "#1E40AF",
                   border: "1px solid #BFDBFE",
-                  fontSize: "0.82rem",
+                  fontSize: "0.78rem",
                   fontWeight: 600,
-                  padding: "6px 12px",
+                  padding: "5px 12px",
                   borderRadius: "9999px",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <Trophy size={14} color="#1E40AF" />
-                <span>IberCup International SA</span>
+                <Trophy size={13} />
+                <span>IberCup Tournament CEO</span>
               </span>
 
               <span
@@ -93,44 +101,38 @@ export default function Hero({ onOpenImageModal }) {
                   background: "#EFF6FF",
                   color: "#1E40AF",
                   border: "1px solid #BFDBFE",
-                  fontSize: "0.82rem",
+                  fontSize: "0.78rem",
                   fontWeight: 600,
-                  padding: "6px 12px",
+                  padding: "5px 12px",
                   borderRadius: "9999px",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <Sparkles size={14} color="#1E40AF" />
-                <span>SA &amp; Spain Diplomatic Envoy</span>
+                <Sparkles size={13} />
+                <span>Bilateral Government Envoy</span>
               </span>
             </div>
 
             {/* CTAs */}
-            <div
-              style={{
-                display: "flex",
-                gap: "12px",
-                flexWrap: "wrap",
-              }}
-            >
-              <a href="#contact" className="btn btn-royal">
-                <span>Start a Dialogue</span>
-                <ArrowRight size={16} />
+            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+              <a href="#contact" className="btn btn-royal" style={{ padding: "10px 20px", minHeight: "40px" }}>
+                <span>Get in Touch</span>
+                <ArrowRight size={15} />
               </a>
-              <a href="#football" className="btn btn-white-outline">
-                <span>Explore Academy &amp; Tournaments</span>
+              <a href="#football" className="btn btn-white-outline" style={{ padding: "10px 20px", minHeight: "40px" }}>
+                <span>View Academy</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: Original Uncropped Barcelona Award Image */}
+          {/* Right Image - Original Uncropped */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <div
               className="img-frame-white"
               style={{
-                maxWidth: "480px",
+                maxWidth: "420px",
                 width: "100%",
                 background: "#FFFFFF",
               }}
@@ -138,11 +140,10 @@ export default function Hero({ onOpenImageModal }) {
                 onOpenImageModal({
                   src: "/images/michael-bender-award.jpg",
                   alt: "Michael Bender honored at RCD Espanyol de Barcelona",
-                  caption:
-                    "Barcelona, Spain — Michael Bender recognized at the IX Annual RCDE Academies Meeting alongside club directors.",
+                  caption: "Barcelona, Spain · IX Annual RCDE Academies Meeting.",
                 })
               }
-              title="Click to view full image in high resolution"
+              title="Click to view full image"
             >
               <Image
                 src="/images/michael-bender-award.jpg"
@@ -151,22 +152,11 @@ export default function Hero({ onOpenImageModal }) {
                 height={800}
                 priority
                 className="img-original"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  borderRadius: "10px",
-                }}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
-            <p
-              style={{
-                fontSize: "0.82rem",
-                color: "#64748B",
-                marginTop: "12px",
-                textAlign: "center",
-              }}
-            >
-              <strong style={{ color: "#1E40AF" }}>Barcelona, Spain</strong> · Honored at the IX RCDE Academies Convention.
+            <p style={{ fontSize: "0.75rem", color: "#64748B", marginTop: "8px", textAlign: "center" }}>
+              Barcelona, Spain · IX RCDE Academies Convention
             </p>
           </div>
         </div>
